@@ -1,0 +1,9 @@
+type: module
+name: Tracy
+description: 'Nette Tracy Debugger implementation for pretty exception stack trace preview - bluescreen'
+package: Development
+# core: 8.x
+configure: tracy.settings
+core: 8.x
+tags:
+ - developer

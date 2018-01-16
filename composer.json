@@ -1,0 +1,20 @@
+{
+  "name": "drupal/tracy",
+  "description": "Debugger",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Michal Landsman",
+      "email": "landsman@studioart.cz"
+    }
+  ],
+  "homepage": "https://github.com/BurdaPraha/drupal_tracy",
+  "support": {
+    "issues": "https://github.com/BurdaPraha/drupal_tracy/issues"
+  },
+  "license": "MIT",
+  "require": {
+    "tracy/tracy": "^2.4",
+    "vasek-purchart/tracy-blue-screen-bundle": "^2.0"
+  }
+}

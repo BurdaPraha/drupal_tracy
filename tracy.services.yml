@@ -1,0 +1,24 @@
+services:
+  tracy.twig_extension:
+    class: Drupal\tracy\TwigExtension\TracyTwigExtension
+    arguments: ['@renderer', '@url_generator', '@theme.manager', '@date.formatter']
+    tags:
+      - { name: twig.extension }
+
+  tracy.event_subscriber:
+    class: Drupal\tracy\EventSubscriber\TracySubscriber
+    arguments: ['@twig']
+    tags:
+      - { name: event_subscriber }
+
+  tracy.twig_profile:
+    class: Drupal\tracy\DataCollector\ThemeDataCollector
+    arguments: ['@theme.manager', '@theme.negotiator', '@twig.profile']
+    tags:
+      - { name: data_collector, template: '@webprofiler/Collector/theme.html.twig', id: 'theme', title: 'Theme', priority: 180 }
+
+  my_blue_screen:
+    class: Tracy\BlueScreen
+    properties:
+        info:
+            - 'environment: %kernel.environment%'

@@ -1,0 +1,7 @@
+'access tracy':
+  title: 'Access Tracy'
+  description: 'Access Tracy collected data.'
+  'restrict access': TRUE
+'view tracy toolbar':
+  title: 'View tracy toolbar'
+  description: 'View tracy toolbar.'
