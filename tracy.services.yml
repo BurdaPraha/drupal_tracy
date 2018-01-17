@@ -1,4 +1,10 @@
 services:
+
+  # register new services for using
+  twig.profile:
+    class: Twig_Profiler_Profile
+
+  # tracy services
   tracy.twig_extension:
     class: Drupal\tracy\TwigExtension\TracyTwigExtension
     arguments: ['@renderer', '@url_generator', '@theme.manager', '@date.formatter']
